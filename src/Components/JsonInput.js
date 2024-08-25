@@ -9,7 +9,7 @@ function JsonInput({ onValidJson }) {
         e.preventDefault();
         try {
             const parsedJson = JSON.parse(jsonInput);
-            const response = await axios.post('http://localhost:8080/bfhl', parsedJson);
+            const response = await axios.post('https://bajaj-123-fbf794d0d9ce.herokuapp.com/bfhl', parsedJson);
             onValidJson(response.data);
             setError('');
         } catch (err) {
