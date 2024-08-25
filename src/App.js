@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React, { useState } from 'react';
+import FilterDropdown from './Components/FilterDropdown';
+import ResponseDisplay from './Components/ResponseDisplay'
+import JsonInput from './Components/JsonInput';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [response, setResponse] = useState(null);
+    const [filters, setFilters] = useState([]);
+
+    return (
+        <div className="App">
+            <h1>21BBS0053</h1>
+            <JsonInput onValidJson={setResponse} />
+            {response && (
+                <>
+                    <FilterDropdown filters={filters} setFilters={setFilters} />
+                    <ResponseDisplay response={response} filters={filters} />
+                </>
+            )}
+        </div>
+    );
 }
 
 export default App;
