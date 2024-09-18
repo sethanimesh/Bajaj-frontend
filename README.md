@@ -1,70 +1,101 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Front-End for Backend Integration
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This project is a React-based front-end application designed to interact with a REST API that processes JSON data, returning specific information such as numbers, alphabets, and the highest lowercase alphabet from the input. The application accepts JSON inputs, sends them to the backend API, and displays the result based on user-selected options.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Input Field**: Allows the user to input a valid JSON.
+- **Validation**: Ensures that the input follows the proper JSON format.
+- **Dropdown Filters**: Allows users to filter the response by selecting "Alphabets," "Numbers," or "Highest Lowercase Alphabet."
+- **Dynamic Rendering**: Renders the filtered results based on user input and selection.
+- **Custom Title**: The website title is dynamically set to the user's roll number.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **React.js**: For building the UI components and handling frontend logic.
+- **Axios**: For making API calls to the backend.
+- **CSS**: Basic styling for UI elements.
+- **Hosted on**: [Netlify/Vercel/Firebase/etc.] (Specify your hosting provider)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Create a `.env` file at the root directory and add your backend API URL:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+REACT_APP_BACKEND_URL=https://your-backend-api-url.com/bfhl
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Your application will be running on [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Enter JSON**: The input field accepts JSON data in the following format:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```json
+    { "data": ["A", "B", "1", "2", "a"] }
+    ```
 
-### Code Splitting
+2. **Submit**: After submitting the JSON, the app will make a POST request to the backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Select Filters**: After receiving a valid response, a multi-select dropdown will appear where you can choose what to display (Alphabets, Numbers, or Highest Lowercase Alphabet).
 
-### Analyzing the Bundle Size
+4. **View Results**: The filtered response is displayed based on your selection.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Example
 
-### Making a Progressive Web App
+- Input:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```json
+    { "data": ["A", "B", "1", "2", "z", "m"] }
+    ```
 
-### Advanced Configuration
+- After submitting and selecting filters for **Alphabets** and **Highest Lowercase Alphabet**, the output will be:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    ```
+    Alphabets: A, B, z, m
+    Highest Lowercase Alphabet: z
+    ```
 
-### Deployment
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy the project, follow the steps for your chosen platform (Netlify/Vercel/Firebase/etc.):
 
-### `npm run build` fails to minify
+1. Build the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run build
+```
+
+2. Deploy using the appropriate platform instructions (e.g., Netlify drag-and-drop, Vercel CLI).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- Built as part of a full-stack challenge involving both frontend and backend development.
+- Special thanks to [Bajaj Finserv Health Challenge] for providing the project requirements.
+
