@@ -11,22 +11,19 @@ This project is a React-based front-end application designed to interact with a 
 - **Validation**: Ensures that the input follows the proper JSON format.
 - **Dropdown Filters**: Allows users to filter the response by selecting "Alphabets," "Numbers," or "Highest Lowercase Alphabet."
 - **Dynamic Rendering**: Renders the filtered results based on user input and selection.
-- **Custom Title**: The website title is dynamically set to the user's roll number.
 
 ## Tech Stack
 
 - **React.js**: For building the UI components and handling frontend logic.
 - **Axios**: For making API calls to the backend.
 - **CSS**: Basic styling for UI elements.
-- **Hosted on**: [Netlify/Vercel/Firebase/etc.] (Specify your hosting provider)
 
 ## Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/sethanimesh/Bajaj-frontend.git
 ```
 
 2. Install dependencies:
